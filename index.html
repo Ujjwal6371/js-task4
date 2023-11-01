@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time in IST</title>
+    <script>
+        function showDate() {
+            const istTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+            const istDate = new Date(istTime);
+            document.getElementById("result").textContent = "Date in IST: " + istDate.toLocaleDateString();
+        }
+
+        function showTime() {
+            const istTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+            const istDate = new Date(istTime);
+            document.getElementById("result").textContent = "Time in IST: " + istDate.toLocaleTimeString();
+        }
+    </script>
+</head>
+<body>
+    <h2>Date and Time in IST</h2>
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="showTime()">Show Time</button>
+    <p id="result"></p>
+</body>
+</html>
